@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-gm-accent: #0ea5e9;
+  --color-gm-accent-soft: #7dd3fc;
+  --color-gm-ink: #0c4a6e;
+  --color-gm-surface: #ffffff;
+  --color-gm-surface-muted: #f0f9ff;
+  --color-gm-surface-dark: #0c1222;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 min-h-svh font-sans antialiased;
+  }
+}
+
+@keyframes gm-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.gm-mesh-glow {
+  animation: gm-glow 5s ease-in-out infinite;
+}
