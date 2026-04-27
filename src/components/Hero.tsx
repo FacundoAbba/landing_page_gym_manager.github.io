@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import { appImages } from '../data/appImages'
-import { AppScreenshot } from './AppScreenshot'
 import { Container } from './Container'
 
 export function Hero() {
@@ -51,22 +49,6 @@ export function Hero() {
             </a>
           </div>
         </motion.div>
-
-        <motion.figure
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto mt-14 max-w-5xl"
-        >
-          <div className="rounded-2xl border border-sky-100/90 bg-slate-50/80 p-2 shadow-xl dark:border-slate-800 dark:bg-slate-900/50 sm:p-3">
-            <AppScreenshot
-              src={appImages.pantallaPrincipal}
-              alt="Captura de la pantalla principal de Gym Manager"
-              priority
-              className="max-h-[min(70vh,640px)]"
-            />
-          </div>
-        </motion.figure>
       </Container>
     </section>
   )
