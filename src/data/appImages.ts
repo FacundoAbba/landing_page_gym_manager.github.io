@@ -1,6 +1,7 @@
 /**
- * Capturas JPEG en `public/images/`.
- * Usa BASE_URL para GitHub Pages (subruta /nombre-repo/).
+ * Capturas de la app: archivos en disco bajo `public/images/` (JPEG).
+ * Vite copia `public/` tal cual al `dist/` en build; conviene tenerlos en git para el deploy.
+ * Las URLs usan `import.meta.env.BASE_URL` para GitHub Pages en subruta (`/repo/`).
  */
 function publicImage(pathFromPublic: string): string {
   const rel = pathFromPublic.replace(/^\/+/, '')
